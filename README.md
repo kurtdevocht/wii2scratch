@@ -17,7 +17,7 @@ Not guaranteed to work on all pc's... You need bluetooth and a compatible driver
 Build the Scratch helper application (Visual studio 2013) or run the binary 'w2s.exe' that can be found in the bin\release folder. It should detect your Wii controller and start listening for http requests sent by Scratch. Can be verified by browsing to http://localhost:15002/poll
 
 ##Step 4 - Import blocks in Scratch
-This only works in the oflfine Scratch editor (https://scratch.mit.edu/scratch2download/).
+This only works in the offline Scratch editor (https://scratch.mit.edu/scratch2download/).
 
 1. Hold the shift-key and click the 'File' menu;
 2. Click 'Import experimental HTTP extension';
