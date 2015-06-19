@@ -1,5 +1,5 @@
 # wii2scratch
-Control you Scratch projects with one or more Wii controllers!
+Control your Scratch 2 projects with one or more Wii controllers!
 Windows only...
 
 ##Step 1 - Make sure .Net framework 4.5.1 is installed
