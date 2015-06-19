@@ -23,17 +23,17 @@ namespace Wii2Scratch.ScratchHelper
 
 			foreach ( var controller in AppState.WiiControllers )
 			{
-				content.AppendFormat( "rotation/up/{0} {1}\n", BoolToString( controller.ButtonUp) );
-				content.AppendFormat( "rotation/right/{0} {1}\n", BoolToString( controller.ButtonRight) );
-				content.AppendFormat( "rotation/left/{0} {1}\n", BoolToString( controller.ButtonLeft) );
-				content.AppendFormat( "rotation/down/{0} {1}\n", BoolToString( controller.ButtonDown) );
-				content.AppendFormat( "rotation/A/{0} {1}\n", BoolToString( controller.ButtonA) );
-				content.AppendFormat( "rotation/B/{0} {1}\n", BoolToString( controller.ButtonB) );
-				content.AppendFormat( "rotation/-/{0} {1}\n", BoolToString( controller.ButtonMin) );
-				content.AppendFormat( "rotation/home/{0} {1}\n", BoolToString( controller.ButtonHome) );
-				content.AppendFormat( "rotation/+/{0} {1}\n", BoolToString( controller.ButtonPlus) );
-				content.AppendFormat( "rotation/1/{0} {1}\n", BoolToString( controller.Button1) );
-				content.AppendFormat( "rotation/2/{0} {1}\n", BoolToString( controller.Button2) );
+				content.AppendFormat( "button/up/{0} {1}\n", controller.Index, BoolToString( controller.ButtonUp) );
+				content.AppendFormat( "button/right/{0} {1}\n", controller.Index, BoolToString( controller.ButtonRight ) );
+				content.AppendFormat( "button/left/{0} {1}\n", controller.Index, BoolToString( controller.ButtonLeft ) );
+				content.AppendFormat( "button/down/{0} {1}\n", controller.Index, BoolToString( controller.ButtonDown ) );
+				content.AppendFormat( "button/A/{0} {1}\n", controller.Index, BoolToString( controller.ButtonA ) );
+				content.AppendFormat( "button/B/{0} {1}\n", controller.Index, BoolToString( controller.ButtonB ) );
+				content.AppendFormat( "button/-/{0} {1}\n", controller.Index, BoolToString( controller.ButtonMin ) );
+				content.AppendFormat( "button/home/{0} {1}\n", controller.Index, BoolToString( controller.ButtonHome ) );
+				content.AppendFormat( "button/+/{0} {1}\n", controller.Index, BoolToString( controller.ButtonPlus ) );
+				content.AppendFormat( "button/1/{0} {1}\n", controller.Index, BoolToString( controller.Button1 ) );
+				content.AppendFormat( "button/2/{0} {1}\n", controller.Index, BoolToString( controller.Button2 ) );
 
 				content.AppendFormat( "rotation/x/{0} {1}\n", controller.Index, (int)( controller.RotationX + 0.5 ) );
 				content.AppendFormat( "rotation/y/{0} {1}\n", controller.Index, (int)( controller.RotationY + 0.5 )  );
