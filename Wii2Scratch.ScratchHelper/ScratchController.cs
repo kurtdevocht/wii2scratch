@@ -11,9 +11,6 @@ namespace Wii2Scratch.ScratchHelper
 {
 	public class ScratchController : ApiController
 	{
-		static object s_lock = new object();
-		static List<string> s_pollInputs = new List<string>();
-
 		[Route( "poll" )]
 		[HttpGet]
 		public HttpResponseMessage Poll()
@@ -39,7 +36,16 @@ namespace Wii2Scratch.ScratchHelper
 				content.AppendFormat( "rotation/y/{0} {1}\n", controller.Index, (int)( controller.RotationY + 0.5 )  );
 				content.AppendFormat( "rotation/z/{0} {1}\n", controller.Index, (int)( controller.RotationZ + 0.5 ) );
 
-				content.AppendFormat( "battery/{0} {1}\n", controller.Index, controller.BatteryPercent );
+                for( int ir = 0; ir <= 3; ir++)
+                {
+                    var irState = controller.IRStates[ir];
+                    content.AppendFormat("irfound/{0}/{1} {2}\n", ir+1, controller.Index, BoolToString(irState.Found));
+                    content.AppendFormat("irpos/x-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.XPos);
+                    content.AppendFormat("irpos/y-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.YPos);
+                }
+                
+
+                content.AppendFormat( "battery/{0} {1}\n", controller.Index, controller.BatteryPercent );
 			}
 						
 			resp.Content = new StringContent( content.ToString(), Encoding.UTF8, "text/plain" );
@@ -85,7 +91,7 @@ namespace Wii2Scratch.ScratchHelper
 
 		[Route( "rumble/{controllerIndex}/{onOff}" )]
 		[HttpGet]
-		public HttpResponseMessage Led( string controllerIndex, string onOff )
+		public HttpResponseMessage Rumble( string controllerIndex, string onOff )
 		{
 			int ci;
 			if ( !int.TryParse( controllerIndex, out ci ) )

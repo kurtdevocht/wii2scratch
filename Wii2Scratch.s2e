@@ -1,20 +1,24 @@
 {
-    "extensionName": "Wii2Scratch",
-    "extensionPort": 15002,
-    "host": "localhost",
-    "blockSpecs": [
-        [ "b", "Button %m.button of controller %m.controller", "button" ],
-        [ "r", "Rotation %m.rotation of controller %m.controller", "rotation" ],
-        [ " ", "Turn led %m.led of controller %m.controller %m.onOff", "led" ],
-        [ " ", "Turn rumble of controller %m.controller %m.onOff", "rumble" ],
-        [ "r", "Battery % of controller %m.controller", "battery" ]
-    ],
+  "extensionName": "Wii2Scratch",
+  "extensionPort": 15002,
+  "host": "localhost",
+  "blockSpecs": [
+    [ "b", "Button %m.button of controller %m.controller", "button", "A", 1 ],
+    [ "r", "Rotation %m.rotation of controller %m.controller", "rotation", "z", "1" ],
+    [ " ", "Turn led %m.led of controller %m.controller %m.onOff", "led", "1", "1", "on" ],
+    [ " ", "Turn rumble of controller %m.controller %m.onOff", "rumble", "1", "on" ],
+    [ "b", "IR %m.ir of controller %m.controller found", "irfound", "1", "1" ],
+    [ "r", "%m.xy of IR %m.ir of controller %m.controller", "irpos", "x-position", "1", "1" ],
+    [ "r", "Battery % of controller %m.controller", "battery", "1" ]
+  ],
 
-    "menus": {
-        "button": [ "up", "right", "down", "left", "A", "B", "-", "home", "+", "1", "2" ],
-        "rotation": [ "x", "y", "z" ],
-        "led": [ "1", "2", "3", "4" ],
-        "controller": [ "1", "2", "3", "4" ],
-        "onOff":  [ "on", "off"]
-    }
+  "menus": {
+    "button": [ "up", "right", "down", "left", "A", "B", "-", "home", "+", "1", "2" ],
+    "rotation": [ "x", "y", "z" ],
+    "led": [ "1", "2", "3", "4" ],
+    "ir": [ "1", "2", "3", "4" ],
+    "xy": [ "x-position", "y-position"],
+    "controller": [ "1", "2", "3", "4" ],
+    "onOff": [ "on", "off" ]
+  }
 }
