@@ -1,0 +1,20 @@
+{
+    "extensionName": "Wii2Scratch",
+    "extensionPort": 15002,
+    "host": "localhost",
+    "blockSpecs": [
+        [ "b", "Button %m.button of controller %m.controller", "button" ],
+        [ "r", "Rotation %m.rotation of controller %m.controller", "rotation" ],
+        [ " ", "Turn led %m.led of controller %m.controller %m.onOff", "led" ],
+        [ " ", "Turn rumble of controller %m.controller %m.onOff", "rumble" ],
+        [ "r", "Battery % of controller %m.controller", "battery" ]
+    ],
+
+    "menus": {
+        "button": [ "up", "right", "down", "left", "A", "B", "-", "home", "+", "1", "2" ],
+        "rotation": [ "x", "y", "z" ],
+        "led": [ "1", "2", "3", "4" ],
+        "controller": [ "1", "2", "3", "4" ],
+        "onOff":  [ "on", "off"]
+    }
+}
