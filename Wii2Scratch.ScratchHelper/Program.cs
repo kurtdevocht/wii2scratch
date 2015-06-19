@@ -30,7 +30,7 @@ namespace Wii2Scratch.ScratchHelper
 			if ( !FindWiiMotes() )
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
-				Console.WriteLine( "**********************************************************" );
+				Console.WriteLine( "***************************************" );
 				Console.WriteLine( @" ______ _____  _____   ____  _____  _ " );
 				Console.WriteLine( @"|  ____|  __ \|  __ \ / __ \|  __ \| |" );
 				Console.WriteLine( @"| |__  | |__) | |__) | |  | | |__) | |" );
@@ -49,7 +49,7 @@ namespace Wii2Scratch.ScratchHelper
 				Console.ForegroundColor = ConsoleColor.Red;
 				Console.WriteLine( "\tPress enter to stop..." );
 				Console.WriteLine();
-				Console.WriteLine( "**********************************************************" );
+				Console.WriteLine( "***************************************" );
 				Console.ForegroundColor = ConsoleColor.Gray;
 				Console.ReadLine();
 				return;
@@ -80,7 +80,7 @@ namespace Wii2Scratch.ScratchHelper
 					Console.WriteLine();
 					Console.WriteLine( "\tPress enter to stop..." );
 					Console.WriteLine();
-					Console.WriteLine( "*******************************************************" );
+					Console.WriteLine( "*****************************************************" );
 					Console.ForegroundColor = ConsoleColor.Gray;
 					Console.ReadLine();
 				}
@@ -88,12 +88,12 @@ namespace Wii2Scratch.ScratchHelper
 			catch ( Exception ex )
 			{
 				Console.ForegroundColor = ConsoleColor.Red;
-				Console.WriteLine( "***************************************************************************" );
+				Console.WriteLine( "*****************************************************" );
 				Console.WriteLine( "ERROR - Cannot listen on " + baseAddress + " : " + ex.Message );
 				Console.WriteLine();
 				Console.WriteLine( "Press enter to stop..." );
 				Console.WriteLine();
-				Console.WriteLine( "***************************************************************************" );
+				Console.WriteLine( "*****************************************************" );
 				Console.ReadLine();
 			}
 		}
@@ -102,15 +102,15 @@ namespace Wii2Scratch.ScratchHelper
 		{
 
 			Console.ForegroundColor = ConsoleColor.Gray;
-			Console.WriteLine( "***************************************************************************" );
+			Console.WriteLine();
 			Console.WriteLine( "Looking for Wii controllers..." );
 			Console.WriteLine();
 
-			var mWC = new WiimoteCollection();
+			var wiimoteCollection = new WiimoteCollection();
 
 			try
 			{
-				mWC.FindAllWiimotes();
+				wiimoteCollection.FindAllWiimotes();
 			}
 			catch ( WiimoteNotFoundException ex )
 			{
@@ -128,8 +128,11 @@ namespace Wii2Scratch.ScratchHelper
 				return false;
 			}
 
+			Console.WriteLine( "Found {0} Wii controller{1}", wiimoteCollection.Count, wiimoteCollection.Count == 1 ? "" : "s" );
+			Console.WriteLine();
+
 			var index = 1;
-			foreach ( var wiimote in mWC )
+			foreach ( var wiimote in wiimoteCollection )
 			{
 				AppState.WiiControllers.Add( new WiiController( index, wiimote ) );
 				index++;
