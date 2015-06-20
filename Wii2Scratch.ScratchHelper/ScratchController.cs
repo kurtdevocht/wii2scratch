@@ -43,10 +43,13 @@ namespace Wii2Scratch.ScratchHelper
                     content.AppendFormat("irpos/x-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.XPos);
                     content.AppendFormat("irpos/y-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.YPos);
                 }
-                
 
-                content.AppendFormat( "battery/{0} {1}\n", controller.Index, controller.BatteryPercent );
+
+				content.AppendFormat( "battery/{0} {1}\n", controller.Index, controller.BatteryPercent );
+				
 			}
+
+			content.AppendFormat( "controllers {0}\n", AppState.WiiControllers.Count );
 						
 			resp.Content = new StringContent( content.ToString(), Encoding.UTF8, "text/plain" );
 			return resp;

@@ -9,7 +9,8 @@
     [ " ", "Turn rumble of controller %m.controller %m.onOff", "rumble", "1", "on" ],
     [ "b", "IR %m.ir of controller %m.controller found", "irfound", "1", "1" ],
     [ "r", "%m.xy of IR %m.ir of controller %m.controller", "irpos", "x-position", "1", "1" ],
-    [ "r", "Battery % of controller %m.controller", "battery", "1" ]
+    [ "r", "Battery % of controller %m.controller", "battery", "1" ],
+    [ "r", "Controllers", "controllers" ]
   ],
 
   "menus": {
