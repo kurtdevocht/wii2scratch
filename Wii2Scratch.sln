@@ -10,6 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{D31039EF-7
 		Wii2Scratch.s2e = Wii2Scratch.s2e
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{AEEE4D41-0B41-4904-BA29-09DBCC9EA432}"
+	ProjectSection(SolutionItems) = preProject
+		samples\Schuptmor3000.sb2 = samples\Schuptmor3000.sb2
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
