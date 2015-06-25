@@ -1,1 +1,16 @@
-src/doc/Backup_of_wiimote+scratch - NL.cdr
+src/Wii2Scratch.ScratchHelper/bin/
+src/Wii2Scratch.ScratchHelper/obj/
+
+src/Wii2Scratch.ScratchHelper/Wii2Scratch.ScratchHelper.csproj.user
+src/Wii2Scratch.v12.suo
+
+src/packages/Microsoft.AspNet.WebApi.Client.5.2.3/
+src/packages/Microsoft.AspNet.WebApi.Core.5.2.3/
+src/packages/Microsoft.AspNet.WebApi.Owin.5.2.3/
+src/packages/Microsoft.AspNet.WebApi.OwinSelfHost.5.2.3/
+src/packages/Microsoft.Owin.2.0.2/
+src/packages/Microsoft.Owin.Host.HttpListener.2.0.2/
+src/packages/Microsoft.Owin.Hosting.2.0.2/
+src/packages/Newtonsoft.Json.6.0.4/
+src/packages/Owin.1.0/
+src/packages/WiimoteLib.1.7/
