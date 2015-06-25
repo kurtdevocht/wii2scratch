@@ -7,12 +7,21 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wii2Scratch.ScratchHelper",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Root", "Root", "{D31039EF-765F-4039-BFFE-8D69EEA8A797}"
 	ProjectSection(SolutionItems) = preProject
-		Wii2Scratch.s2e = Wii2Scratch.s2e
+		..\README.md = ..\README.md
+		..\Start Helper App.bat = ..\Start Helper App.bat
+		..\Wii2Scratch Extension.s2e = ..\Wii2Scratch Extension.s2e
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{AEEE4D41-0B41-4904-BA29-09DBCC9EA432}"
 	ProjectSection(SolutionItems) = preProject
 		samples\Schuptmor3000.sb2 = samples\Schuptmor3000.sb2
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{9518745B-ECAD-4097-A0BD-08F68FA8C337}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{4FB8165C-37CC-4B4E-AC9C-C756FD9159D6}"
+	ProjectSection(SolutionItems) = preProject
+		doc\wii2scratch - NL.cdr = doc\wii2scratch - NL.cdr
 	EndProjectSection
 EndProject
 Global
@@ -28,5 +37,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AEEE4D41-0B41-4904-BA29-09DBCC9EA432} = {D31039EF-765F-4039-BFFE-8D69EEA8A797}
+		{9518745B-ECAD-4097-A0BD-08F68FA8C337} = {D31039EF-765F-4039-BFFE-8D69EEA8A797}
+		{4FB8165C-37CC-4B4E-AC9C-C756FD9159D6} = {9518745B-ECAD-4097-A0BD-08F68FA8C337}
 	EndGlobalSection
 EndGlobal

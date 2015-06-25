@@ -1,0 +1,1 @@
+start ./bin/w2s.exe
