@@ -14,7 +14,7 @@ Not guaranteed to work on all pc's... You need bluetooth and a compatible driver
 4. The device should be named 'Nintendo RVL-CNT-01'. Status should be 'Connected'.
 
 ##Step 3 - Run the Scratch helper application
-Build the Scratch helper application (Visual studio 2013) or run the binary 'w2s.exe' that can be found in the bin\release folder. It should detect your Wii controller and start listening for http requests sent by Scratch. Can be verified by browsing to http://localhost:15002/poll
+Build the Scratch helper application (Visual studio 2013) or run the binary 'w2s.exe' that can be found in the bin folder. It should detect your Wii controller and start listening for http requests sent by Scratch. Can be verified by browsing to http://localhost:15002/poll
 
 ##Step 4 - Import blocks in Scratch
 This only works in the offline Scratch editor (https://scratch.mit.edu/scratch2download/).
