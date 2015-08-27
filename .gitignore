@@ -16,3 +16,9 @@ src/packages/Microsoft.Owin.Hosting.2.0.2/
 src/packages/Newtonsoft.Json.6.0.4/
 src/packages/Owin.1.0/
 src/packages/WiimoteLib.1.7/
+/src/.vs
+/src/packages/Microsoft.Owin.3.0.1
+/src/packages/Microsoft.Owin.Hosting.3.0.1
+/src/packages/Newtonsoft.Json.7.0.1
+/src/packages/Nowin.0.17.1.0/lib/net45
+/src/packages/Nowin.0.17.1.0

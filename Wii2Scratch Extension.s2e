@@ -1,7 +1,6 @@
 {
   "extensionName": "Wii2Scratch",
   "extensionPort": 15002,
-  "host": "localhost",
   "blockSpecs": [
     [ "b", "Button %m.button of controller %m.controller", "button", "A", 1 ],
     [ "r", "Rotation %m.rotation of controller %m.controller", "rotation", "z", "1" ],
