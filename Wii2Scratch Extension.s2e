@@ -7,17 +7,17 @@
     [ " ", "Turn led %m.led of controller %m.controller %m.onOff", "led", "1", "1", "on" ],
     [ " ", "Turn rumble of controller %m.controller %m.onOff", "rumble", "1", "on" ],
     [ "b", "IR %m.ir of controller %m.controller found", "irfound", "1", "1" ],
-    [ "r", "%m.xy of IR %m.ir of controller %m.controller", "irpos", "x-position", "1", "1" ],
+    [ "r", "%m.xy of IR %m.ir of controller %m.controller", "irpos", "x", "1", "1" ],
     [ "r", "Battery % of controller %m.controller", "battery", "1" ],
     [ "r", "Controllers", "controllers" ]
   ],
 
   "menus": {
-    "button": [ "up", "right", "down", "left", "A", "B", "-", "home", "+", "1", "2" ],
+    "button": [ "˄", "˃", "˅", "˂", "A", "B", "-", "⌂", "+", "1", "2" ],
     "rotation": [ "x", "y", "z" ],
     "led": [ "1", "2", "3", "4" ],
     "ir": [ "1", "2", "3", "4" ],
-    "xy": [ "x-position", "y-position"],
+    "xy": [ "x", "y"],
     "controller": [ "1", "2", "3", "4" ],
     "onOff": [ "on", "off" ]
   }

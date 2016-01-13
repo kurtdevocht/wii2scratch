@@ -19,15 +19,15 @@ namespace Wii2Scratch.ScratchHelper
 			var content = new StringBuilder();
 
 			foreach ( var controller in AppState.WiiControllers )
-			{
-				content.AppendFormat( "button/up/{0} {1}\n", controller.Index, BoolToString( controller.ButtonUp) );
-				content.AppendFormat( "button/right/{0} {1}\n", controller.Index, BoolToString( controller.ButtonRight ) );
-				content.AppendFormat( "button/left/{0} {1}\n", controller.Index, BoolToString( controller.ButtonLeft ) );
-				content.AppendFormat( "button/down/{0} {1}\n", controller.Index, BoolToString( controller.ButtonDown ) );
+            {
+				content.AppendFormat( "button/˄/{0} {1}\n", controller.Index, BoolToString( controller.ButtonUp) );
+				content.AppendFormat( "button/˃/{0} {1}\n", controller.Index, BoolToString( controller.ButtonRight ) );
+				content.AppendFormat( "button/˂/{0} {1}\n", controller.Index, BoolToString( controller.ButtonLeft ) );
+				content.AppendFormat( "button/˅/{0} {1}\n", controller.Index, BoolToString( controller.ButtonDown ) );
 				content.AppendFormat( "button/A/{0} {1}\n", controller.Index, BoolToString( controller.ButtonA ) );
 				content.AppendFormat( "button/B/{0} {1}\n", controller.Index, BoolToString( controller.ButtonB ) );
 				content.AppendFormat( "button/-/{0} {1}\n", controller.Index, BoolToString( controller.ButtonMin ) );
-				content.AppendFormat( "button/home/{0} {1}\n", controller.Index, BoolToString( controller.ButtonHome ) );
+				content.AppendFormat( "button/⌂/{0} {1}\n", controller.Index, BoolToString( controller.ButtonHome ) );
 				content.AppendFormat( "button/+/{0} {1}\n", controller.Index, BoolToString( controller.ButtonPlus ) );
 				content.AppendFormat( "button/1/{0} {1}\n", controller.Index, BoolToString( controller.Button1 ) );
 				content.AppendFormat( "button/2/{0} {1}\n", controller.Index, BoolToString( controller.Button2 ) );
@@ -40,8 +40,8 @@ namespace Wii2Scratch.ScratchHelper
                 {
                     var irState = controller.IRStates[ir];
                     content.AppendFormat("irfound/{0}/{1} {2}\n", ir+1, controller.Index, BoolToString(irState.Found));
-                    content.AppendFormat("irpos/x-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.XPos);
-                    content.AppendFormat("irpos/y-position/{0}/{1} {2}\n", ir+1, controller.Index, irState.YPos);
+                    content.AppendFormat("irpos/x/{0}/{1} {2}\n", ir+1, controller.Index, irState.XPos);
+                    content.AppendFormat("irpos/y/{0}/{1} {2}\n", ir+1, controller.Index, irState.YPos);
                 }
 
 
@@ -88,7 +88,7 @@ namespace Wii2Scratch.ScratchHelper
 				return this.OkResponse; ;
 			}
 
-			controller.SetLed( li, onOff.ToLower() == "on" );
+			controller.SetLed( li, "on aan".Contains( onOff.ToLower() ) );
 			return this.OkResponse;
 		}
 
@@ -108,7 +108,7 @@ namespace Wii2Scratch.ScratchHelper
 				return this.OkResponse; ;
 			}
 
-			controller.SetRumble( onOff.ToLower() == "on" );
+			controller.SetRumble( "on aan".Contains( onOff.ToLower() ) );
 			return this.OkResponse;
 		}
 
